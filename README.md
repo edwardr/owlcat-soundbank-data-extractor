@@ -32,6 +32,7 @@ To extract all of Jaethal's voice lines in Kingmaker:
 `python soundbank-extract.py --game Kingmaker --search Jaethal`
 
 These commands will create a CSV file with the names of the WEM audio files and their descriptions/labels.
+![Screenshot from 2023-10-09 19-07-22](https://github.com/edwardr/owlcat-soundbank-data-extractor/assets/2935628/ac320f38-1444-4720-b2ae-aeb3b1d2d4e7)
 
 Optionally, you can specify a custom filename, as such:
 
