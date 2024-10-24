@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+# https://github.com/edwardr/owlcat-soundbank-data-extractor
+
 import xml.etree.ElementTree as ET
 import csv, argparse, time
 
