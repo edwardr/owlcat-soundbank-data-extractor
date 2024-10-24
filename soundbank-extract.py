@@ -4,7 +4,7 @@ import xml.etree.ElementTree as ET
 import csv, argparse, time
 
 def run_kingmaker(search):
-    tree = ET.parse("KingmakerSoundbanksInfo.xml")
+    tree = ET.parse("SoundbanksInfo.xml")
     root = tree.getroot()
     rows = []
     for file in root.findall(".//StreamedFiles/*"):
@@ -17,8 +17,10 @@ def run_kingmaker(search):
             rows.append(row)
     return rows
 
+# this method is no longer used as they 
+# reverted the Wrath file to use the Kingmaker structure
 def run_wrath(search):
-    tree = ET.parse("WrathSoundbanksInfo.xml")
+    tree = ET.parse("SoundbanksInfo.xml")
     root = tree.getroot()
     rows = []
     for soundbank in root.findall(".//SoundBanks/*"):
@@ -49,7 +51,7 @@ def main():
     if args.g == "Kingmaker":
         data = run_kingmaker(args.s)
     elif args.g == "Wrath":
-        data = run_wrath(args.s)
+        data = run_kingmaker(args.s)
     else:
         exit("Error: Invalid game.") 
 
